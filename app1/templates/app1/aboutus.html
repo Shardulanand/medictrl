@@ -1,0 +1,377 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us | MediCTRL{% endblock title %}
+{% block body %}
+<style>
+    .about img{
+        height:530px;
+        margin-top:70px;
+        margin-left:200px;
+    }
+    .about img:{
+
+    }
+    .about_info p{
+        margin-left:900px;
+        color:black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .about_info h2{
+        color:#4883B0;
+        margin-top:-500px;
+        margin-left:1000px;
+        font-size:2.187rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .team{
+        height:200px;
+    }
+    .team h2{
+        color:#4883B0;
+        margin-top:300px;
+        margin-left:650px;
+        font-size:3.187rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .team p{
+        margin-left:500px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size:1.19rem;
+
+    }
+    {% comment %} VARUN {% endcomment %}
+    .teaminfo1 {
+        background-color:white;
+        height:603px;
+        width:350px;
+        margin-left:190px;
+        box-shadow: 5px 11px 19px #888888;
+        transition-property: width height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+    .teaminfo1:hover{
+        width:380px;
+        height:610px;
+
+    }
+    .teaminfo1 a{
+        margin-left:100px;
+        margin-bottom:-300px;
+        font-size:25px;
+        color:#4883B0;
+    }
+    .teaminfo1 img{
+        height:350px;
+        width:350px;
+        margin-left:0px;
+        margin-top:0px;
+        transition-property: width height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+    .teaminfo1 img:hover{
+        width:380px;
+        height:380px;
+        
+    }
+    .teaminfo1 h5{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size:20px;
+        margin-top:5px;
+        margin-left:5px;
+        color:#4883B0;
+    }
+    .teaminfo1 p{
+        color:darkgrey;
+        margin-top:-30px;
+        margin-left:5px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .ex {
+        font-color:black;
+        font-size:18px;
+        margin-top:50px;
+    }
+    {% comment %} Ratul  {% endcomment %}
+    .teaminfo2 {
+        background-color:white;
+        height:600px;
+        width:350px;
+        margin-left:580px;
+        margin-top:-600px;
+        box-shadow: 5px 11px 19px #888888;
+        transition-property: width height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+    .teaminfo2:hover{
+        width:380px;
+        height:600px;
+        
+    }
+    .teaminfo2 a{
+        margin-left:100px;
+        margin-bottom:-300px;
+        font-size:25px;
+        color:#4883B0;
+    }
+    .teaminfo2 img{
+        height:350px;
+        margin-left:0px;
+        margin-top:0px;
+        transition-property: width height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+    .teaminfo2 h5{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size:20px;
+        margin-top:5px;
+        margin-left:5px;
+        color:#4883B0;
+    }
+    .teaminfo2 p{
+        color:darkgrey; 
+        margin-top:-30px;
+        margin-left:5px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .ex2 {
+        font-size:17px;
+        margin-top:50px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    .teaminfo2 img:hover{
+        width:380px;
+        height:380px;
+        
+    }
+    {% comment %} shaumya {% endcomment %}
+    .teaminfo3 {
+        background-color:white;
+        height:600px;
+        width:350px;
+        margin-left:970px;
+        margin-top:-600px;
+        box-shadow: 5px 11px 19px #888888;
+        transition-property: width height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+
+    }
+    .teaminfo3:hover{
+        width:380px;
+
+    }
+    .teaminfo3 a{
+        margin-left:100px;
+        margin-bottom:-300px;
+        font-size:25px;
+        color:#4883B0;
+    }
+    .teaminfo3 img{
+        height:350px;
+        margin-left:0px;
+        margin-top:0px;
+        transition-property: width height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+    .teaminfo3 img:hover{
+        width:380px;
+        height:380px;
+        
+    }
+    .teaminfo3 h5{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size:20px;
+        margin-top:5px;
+        margin-left:5px;
+        color:#4883B0;
+    }
+    .teaminfo3 p{
+        color:darkgrey;
+        margin-top:-30px;
+        margin-left:5px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .ex3 {
+        font-size:17px;
+        margin-top:50px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    {% comment %} CTO {% endcomment %}
+    .teaminfo4 {
+        background-color:white;
+        height:600px;
+        width:350px;
+        margin-left:190px;
+        margin-top:50px;
+        box-shadow: 5px 11px 19px #888888;
+        transition-property: width height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+    .teaminfo4:hover{
+        width:380px;
+        height:600px;  
+    }
+    .teaminfo4 a{
+        margin-left:100px;
+        margin-bottom:-300px;
+        font-size:25px;
+        color:#4883B0;
+    }
+    .teaminfo4 img{
+        height:350px;
+        margin-left:0px;
+        margin-top:0px;
+        transition-property: width height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+
+    .teaminfo4 img:hover{
+        width:380px;
+        height:380px;
+        
+    }
+    .teaminfo4 h5{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size:20px;
+        margin-top:5px;
+        margin-left:5px;
+        color:#4883B0;
+    }
+    .teaminfo4 p{
+        color:darkgrey;
+        margin-top:-30px;
+        margin-left:5px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .ex4 {
+        font-size:17px;
+        margin-top:50px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    {% comment %} rankit {% endcomment %}
+    .teaminfo5 {
+        background-color:white;
+        height:600px;
+        width:350px;
+        margin-left:580px;
+        margin-top:-600px;
+        box-shadow: 5px 11px 19px #888888;
+        transition-property: width height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+    .teaminfo5:hover{
+        width:380px;
+        height:600px;  
+    }
+    .teaminfo5 a{
+        margin-left:100px;
+        margin-bottom:-300px;
+        font-size:25px;
+        color:#4883B0;
+    }
+    .teaminfo5 img{
+        height:350px;
+        width:350px;
+        margin-left:0px;
+        margin-top:0px;
+        transition-property: width height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+    .teaminfo5 img:hover{
+        width:380px;
+        height:380px;
+        
+    }
+    .teaminfo5 h5{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size:20px;
+        margin-top:5px;
+        margin-left:5px;
+        color:#4883B0;
+    }
+    .teaminfo5 p{
+        color:darkgrey;
+        margin-top:-30px;
+        margin-left:5px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+</style>
+{% block content %}
+<div class="about">
+<img src= {% static 'app1/img/about.png' %}>
+</div>
+<div class="about_info">
+    <h2>Our Mission</h2>
+    <p>With an aim to create a network of top-notch hospitals<br>
+        called Medictrl is committed to offering topnotch medical<br>
+        treatment to everyone.<br><br>
+        With the help of Medictrl's innovative solutions, hospitals<br>
+        can treat patients more affordably, provide them a better<br>
+        overall experience, and uphold high standards for medical<br>
+        quality with the goal of building a hospital network that<br>
+        patients can rely on for excellent results, price<br>
+        transparency, and a top-notch experience.
+    </p>
+</div>
+<div class="team">
+    <h2>Our Team</h2>
+    <p>The ones working day night to give you the platform for all your<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp healthcare needs.</p>
+</div>
+<div class="teaminfo1">
+    <img src= {% static 'app1/img/varun.jpg' %}>
+    <h5>Varun Kumar Singh <a href="https://www.linkedin.com/in/varun-singh-vs0920/"><i class="fa-brands fa-linkedin"></i></a></h5>
+
+    <p><b>Chief Executive Officer</b></p>
+    <div class="ex">
+        <p>11+ years of experience in healthcare. Track record of business development, strategic, relationship management, network management, new city launching, & ancillary revenue stream, key accounts management, Innovation, Startups(Healthcare).</p>
+    </div>
+</div>
+<div class="teaminfo2">
+    <img src= {% static 'app1/img/ratul.jpg' %}>
+    <h5>Ratul Majmudar <a href="https://www.linkedin.com/in/ratul-majumdar-69b46038/"><i class="fa-brands fa-linkedin"></i></a></h5>
+    <p><b>Chief Operating Officer</b></p>
+    <div class="ex2">
+        <p>17+ years of experience in healthcare. Rich expertise in Overall Hospital Business Development and Management and Strategic Medical Recruitment.</p>
+    </div>
+</div>
+<div class="teaminfo3">
+    <img src= {% static 'app1/img/shoumya.jpg' %}>
+    <h5>CA Shoumya Hor <a href="https://www.linkedin.com/in/ca-shoumya-hor-8033a55/"><i class="fa-brands fa-linkedin"></i></a></h5>
+    <p><b>Chief Financial Officer</b></p>
+    <div class="ex3">
+        <p>Chartered Accountant having 25 + years of experience Worked as CFO s in major Indian Companies Mahindra Group Company and MNCs such as Husco Hydraulics a subsidiary of US MNC, and Hyundai Construction Equipment</p>
+    </div>
+</div>
+<div class="teaminfo4">
+    <img src= {% static 'app1/img/cto.png' %}>
+    <h5>Dummy <a href="###"><i class="fa-brands fa-linkedin"></i></a></h5>
+    <p><b>Chief Technical Officer</b></p>
+    <div class="ex3">
+        <p>An IIT alumnus and startup enthusiastic who has served in 3 startups as a founding team member. Naresh is a software engineer who have worked for more than 7 years before joining us</p>
+    </div>
+</div>
+<div class="teaminfo5">
+    <img src= {% static 'app1/img/rankit.jpg' %}>
+    <h5>Rankit Singh <a href="https://www.linkedin.com/in/rankit-singh/"><i class="fa-brands fa-linkedin"></i></a></h5>
+    <p><b>Founding Team</b></p>
+    <div class="ex3">
+        <p>Passionate about entrepreneurship & startup culture. Worked and curated data in healthcare business startup.Experienced in building startups from ideation.</p>
+    </div>
+</div>
+
+{% endblock content %}
+{% endblock body %}
